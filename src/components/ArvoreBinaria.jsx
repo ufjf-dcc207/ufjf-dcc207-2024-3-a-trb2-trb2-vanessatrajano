@@ -14,12 +14,17 @@ function ArvoreBinaria() {
     <div>
       <h1>Árvore Binária</h1>
       <div>
-        <input type="number" placeholder="valor" value={valor} onChange={(e) => setValorInserir(e.target.value)}/>
+        <input
+          type="number"
+          placeholder="valor"
+          value={valor}
+          onChange={(e) => setValor(e.target.value)}
+        />
         <button>Inserir</button>
         <button>Remover</button>
       </div>
       <div>
-        <No no={arvore}/>
+        <No no={arvore} />
       </div>
     </div>
   );

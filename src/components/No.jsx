@@ -1,11 +1,11 @@
 import "./No.css";
 
-function No({no}) {
+function No({ no }) {
   return (
     <div>
       <span>{no.valor}</span>
       <div>
-      <div>
+        <div>
           {no.esquerda && (
             <div>
               <span>Esquerda: </span>
