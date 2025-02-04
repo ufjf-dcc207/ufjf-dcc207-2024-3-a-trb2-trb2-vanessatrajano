@@ -1,12 +1,12 @@
-import './App.css'
-import ArvoreBinaria from './components/ArvoreBinaria'
+import "./App.css";
+import ArvoreBinaria from "./components/ArvoreBinaria";
 
 function App() {
   return (
     <>
       <ArvoreBinaria />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

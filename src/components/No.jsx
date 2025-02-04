@@ -1,15 +1,25 @@
 import "./No.css";
 
-function No() {
+function No({ no }) {
   return (
     <div>
-      <span>5</span>
+      <span>{no.valor}</span>
       <div>
         <div>
-          <span>Esquerda: 3</span>
+          {no.esquerda && (
+            <div>
+              <span>Esquerda: </span>
+              <No no={no.esquerda} />
+            </div>
+          )}
         </div>
         <div>
-          <span>Direita: 10</span>
+          {no.direita && (
+            <div>
+              <span>Direita: </span>
+              <No no={no.direita} />
+            </div>
+          )}
         </div>
       </div>
     </div>
