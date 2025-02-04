@@ -5,8 +5,8 @@ import No from "./No";
 function ArvoreBinaria() {
   const [arvore, setArvore] = useState({
     valor: 10,
-    esquerda: null,
-    direita: null,
+    esquerda: { valor: 5, esquerda: null, direita: null },
+    direita: { valor: 15, esquerda: null, direita: null },
   });
   const [valor, setValor] = useState();
 
@@ -19,7 +19,7 @@ function ArvoreBinaria() {
         <button>Remover</button>
       </div>
       <div>
-        <No />
+        <No no={arvore}/>
       </div>
     </div>
   );
