@@ -1,4 +1,5 @@
 import "./ArvoreBinaria.css";
+import No from "./No";
 
 function ArvoreBinaria() {
   return (
@@ -10,7 +11,7 @@ function ArvoreBinaria() {
         <button>Remover</button>
       </div>
       <div>
-        <p> estrutura da árvore vai entrar aqui </p>
+        <No />
       </div>
     </div>
   );
