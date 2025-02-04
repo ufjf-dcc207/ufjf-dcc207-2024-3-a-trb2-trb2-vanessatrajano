@@ -14,6 +14,37 @@ function inserirNo(no, valor) {
   return no;
 }
 
+function removerNo(no, valor) {
+  if (no === null) {
+    return null;
+  }
+  if (valor < no.valor) {
+    return { ...no, esquerda: removerNo(no.esquerda, valor) };
+  } else if (valor > no.valor) {
+    return { ...no, direita: removerNo(no.direita, valor) };
+  } else {
+    if (no.esquerda === null && no.direita === null) {
+      return null;
+    }
+    if (no.esquerda === null) {
+      return no.direita;
+    }
+    if (no.direita === null) {
+      return no.esquerda;
+    }
+
+    let sucessor = no.direita;
+    while (sucessor.esquerda !== null) {
+      sucessor = sucessor.esquerda;
+    }
+    return {
+      valor: sucessor.valor,
+      esquerda: no.esquerda,
+      direita: removerNo(no.direita, sucessor.valor),
+    };
+  }
+}
+
 function ArvoreBinaria() {
   const [arvore, setArvore] = useState({
     valor: 20,
@@ -24,6 +55,11 @@ function ArvoreBinaria() {
 
   const manipularInsercao = () => {
     setArvore(inserirNo(arvore, valor));
+    setValor("");
+  };
+
+  const manipularRemocao = () => {
+    setArvore(removerNo(arvore, valor));
     setValor("");
   };
 
@@ -38,7 +74,7 @@ function ArvoreBinaria() {
           onChange={(e) => setValor(e.target.value)}
         />
         <button onClick={manipularInsercao}>Inserir</button>
-        <button>Remover</button>
+        <button onClick={manipularRemocao}>Remover</button>
       </div>
       <div>
         <No no={arvore} />
