@@ -2,12 +2,12 @@ import "./No.css";
 
 function No({ no }) {
   return (
-    <div>
+    <div className="no-container">
       <span>{no.valor}</span>
-      <div>
-        <div>
+      <div className="filhos-container">
+        <div className="no-esq">
           {no.esquerda && (
-            <div>
+            <div className="valor-container">
               <span>Esquerda: </span>
               <No no={no.esquerda} />
             </div>
@@ -15,7 +15,7 @@ function No({ no }) {
         </div>
         <div>
           {no.direita && (
-            <div>
+            <div className="valor-container">
               <span>Direita: </span>
               <No no={no.direita} />
             </div>

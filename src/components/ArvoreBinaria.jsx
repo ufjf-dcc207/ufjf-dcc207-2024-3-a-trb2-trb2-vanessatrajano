@@ -64,17 +64,19 @@ function ArvoreBinaria() {
   };
 
   return (
-    <div>
+    <div className="arvore-container">
       <h1>Árvore Binária</h1>
-      <div>
+      <div className="input-container">
         <input
           type="number"
           placeholder="valor"
           value={valor}
           onChange={(e) => setValor(e.target.value)}
         />
-        <button onClick={manipularInsercao}>Inserir</button>
-        <button onClick={manipularRemocao}>Remover</button>
+        <div>
+          <button onClick={manipularInsercao}>Inserir</button>
+          <button onClick={manipularRemocao}>Remover</button>
+        </div>
       </div>
       <div>
         <No no={arvore} />
