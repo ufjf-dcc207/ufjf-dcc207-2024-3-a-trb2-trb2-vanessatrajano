@@ -3,19 +3,24 @@
   margin: 10px;
   padding: 5px;
   font-size: 1.35rem;
+  display: grid;
 }
 
 .filhos-container{
-    display: flex; 
-    justify-content: space-around;
     padding: 5px;
     gap: 15px;
-}
 
-.valor-container{
-    display: flex;
-    span{
-        text-align: center;
-        margin-top: 15px;
+    .no-esq{
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .valor-container{
+        display: flex;
+        span{
+            text-align: center;
+            margin-top: 15px;
+            width: 100px;
+        }
     }
 }

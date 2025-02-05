@@ -5,7 +5,7 @@ function No({ no }) {
     <div className="no-container">
       <span>{no.valor}</span>
       <div className="filhos-container">
-        <div>
+        <div className="no-esq">
           {no.esquerda && (
             <div className="valor-container">
               <span>Esquerda: </span>
