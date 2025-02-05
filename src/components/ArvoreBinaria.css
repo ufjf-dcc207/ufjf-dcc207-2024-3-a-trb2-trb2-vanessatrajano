@@ -1,0 +1,48 @@
+.arvore-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+
+    h1{
+        margin: 20px;
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        background-color: #ccc;
+        padding: 10px 90px;
+        border-radius: 5px;
+    }
+}
+
+.input-container{
+    width: 30%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    input{
+        width: 60%;
+        height: 35%;
+        padding-left: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    div{
+        width: 50%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        button{
+            height: 100%;
+            width: 80px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ccc;
+        }
+    }
+}
