@@ -55,13 +55,15 @@ function ArvoreBinaria() {
 
   const manipularInsercao = () => {
     if(valor != ""){
-      setArvore(inserirNo(arvore, valor));
+      const valorNumerico = parseInt(valor, 10);
+      setArvore(inserirNo(arvore, valorNumerico));
       setValor("");
     }
   };
 
   const manipularRemocao = () => {
-    setArvore(removerNo(arvore, valor));
+    const valorNumerico = parseInt(valor, 10);
+    setArvore(removerNo(arvore, valorNumerico));
     setValor("");
   };
 
