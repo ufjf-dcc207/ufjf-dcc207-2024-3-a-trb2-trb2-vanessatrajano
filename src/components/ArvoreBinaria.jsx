@@ -62,9 +62,11 @@ function ArvoreBinaria() {
   };
 
   const manipularRemocao = () => {
-    const valorNumerico = parseInt(valor, 10);
-    setArvore(removerNo(arvore, valorNumerico));
-    setValor("");
+    if(valor != ""){
+      const valorNumerico = parseInt(valor, 10);
+      setArvore(removerNo(arvore, valorNumerico));
+      setValor("");
+    }
   };
 
   return (
