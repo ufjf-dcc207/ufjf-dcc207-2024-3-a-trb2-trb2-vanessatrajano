@@ -51,11 +51,13 @@ function ArvoreBinaria() {
     esquerda: { valor: 5, esquerda: null, direita: null },
     direita: { valor: 30, esquerda: null, direita: null },
   });
-  const [valor, setValor] = useState();
+  const [valor, setValor] = useState("");
 
   const manipularInsercao = () => {
-    setArvore(inserirNo(arvore, valor));
-    setValor("");
+    if(valor != ""){
+      setArvore(inserirNo(arvore, valor));
+      setValor("");
+    }
   };
 
   const manipularRemocao = () => {
